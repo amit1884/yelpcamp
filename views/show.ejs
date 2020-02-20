@@ -1,0 +1,10 @@
+<%- include('./partials/header.ejs') %>
+
+<h1><%= campground.name %></h1>
+<img src ="<%= campground.image %>"width="500" height="500">
+<p><%= campground.description %></p>
+<% campground.comments.forEach((comment)=>{ %>
+    <p><b><%=comment.author %></b> - <%=comment.text %></p>
+    <p></p>
+<% })%>
+<%- include('./partials/footer.ejs') %>

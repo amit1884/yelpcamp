@@ -65,6 +65,12 @@ app.get("/campgrounds/:id",(req,res)=>{
     
 });
 
+
+//comment route
+app.get("/campgrounds/:id/comments/new",(req,res)=>{
+    res.send("this will be comment form page");
+});
+
 app.listen(3000,()=>{
     console.log('server started');
 });

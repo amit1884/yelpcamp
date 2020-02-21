@@ -5,6 +5,6 @@
 <p><%= campground.description %></p>
 <% campground.comments.forEach((comment)=>{ %>
     <p><b><%=comment.author %></b> - <%=comment.text %></p>
-    <p></p>
 <% })%>
+<a href ="/campgrounds/<%=campground._id %>/comments/new"><button class ="btn btn-outline-warning">Comment</button></a>
 <%- include('./partials/footer.ejs') %>

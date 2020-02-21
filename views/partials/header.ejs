@@ -31,9 +31,13 @@
             <a href ="/" class ="brand">YelpCamp</a>
             <div style="display:inline-block;">
             <ul>
-              <li style="display:inline-block;"><a href ="/" >Login</a></li>
-              <li style="display:inline-block;"><a href ="/">SignUp</a></li>
-              <li style="display:inline-block;"><a href ="/">Logout</a></li>
+              <% if(!currentUser){%>
+              <li style="display:inline-block;"><a href ="/login" >Login</a></li>
+              <li style="display:inline-block;"><a href ="/register">SignUp</a></li>
+              <%} else {%>
+                <li style="display:inline-block;">Signed in As &nbsp;<%=currentUser.username%></li>
+              <li style="display:inline-block;"><a href ="/logout">Logout</a></li>
+              <%}%>
             </ul>
             </div>
           </div>
